@@ -1,0 +1,84 @@
+// export default function WhyUs() {
+//   return (
+//     <section className="py-16">
+//       <div className="max-w-7xl mx-auto px-6 text-center">
+//         <h3 className="text-3xl font-bold mb-10">Why Choose HomeFinder?</h3>
+
+//         <div className="grid md:grid-cols-3 gap-8">
+//           <div className="p-6 rounded-xl border">
+//             <h4 className="font-semibold text-xl mb-2">Verified Listings</h4>
+//             <p className="text-gray-600">100% authentic and verified properties.</p>
+//           </div>
+
+//           <div className="p-6 rounded-xl border">
+//             <h4 className="font-semibold text-xl mb-2">Best Prices</h4>
+//             <p className="text-gray-600">Market competitive pricing guaranteed.</p>
+//           </div>
+
+//           <div className="p-6 rounded-xl border">
+//             <h4 className="font-semibold text-xl mb-2">Trusted Agents</h4>
+//             <p className="text-gray-600">Professional and experienced agents.</p>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+export default function WhyUs() {
+  const features = [
+    {
+      title: "Verified Listings",
+      desc: "100% authentic and verified properties for safe investment.",
+      color: "from-indigo-500 to-purple-500",
+    },
+    {
+      title: "Best Prices",
+      desc: "Market competitive pricing with no hidden charges.",
+      color: "from-emerald-500 to-teal-500",
+    },
+    {
+      title: "Trusted Agents",
+      desc: "Professional and experienced agents you can rely on.",
+      color: "from-orange-500 to-pink-500",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
+        <div data-aos="fade-up" className="text-center max-w-2xl mx-auto mb-16">
+          <h3 className="text-4xl font-bold mb-4">Why Choose HomeFinder?</h3>
+          <p className="text-gray-600">
+            We deliver trust, transparency, and value in every property deal.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-10">
+          {features.map((item, index) => (
+            <div
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 150}
+              className="group bg-white rounded-2xl p-8 shadow hover:shadow-xl 
+              transition duration-300 hover:-translate-y-2"
+            >
+              {/* Icon substitute: colored circle */}
+              <div
+                className={`w-14 h-14 flex items-center justify-center rounded-full 
+                bg-gradient-to-r ${item.color} text-white mb-6 text-lg font-bold`}
+              >
+                {item.title[0]}
+              </div>
+
+              <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
+
+              <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
