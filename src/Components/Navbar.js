@@ -20,19 +20,19 @@ function Navbar() {
 
           <li>
             <Link
-              to="/Booking"
+              to="/Servicers"
               className="px-4 py-2 rounded-lg text-white hover:bg-teal-600 transition"
             >
-              Booking Services
+              Services
             </Link>
           </li>
 
           <li>
             <Link
-              to="/Servicers"
+              to="/About"
               className="px-4 py-2 rounded-lg text-white hover:bg-teal-600 transition"
             >
-              Services
+              About Us
             </Link>
           </li>
 

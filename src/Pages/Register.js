@@ -5,8 +5,6 @@ import Footer from "../Components/Footer";
 
 function Register() {
   const navigate = useNavigate();
-
-  // State for inputs
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,19 +27,23 @@ function Register() {
     existingUsers.push(newUser);
     localStorage.setItem("users", JSON.stringify(existingUsers));
 
-    // Save current user email for logged-in session
-    localStorage.setItem("currentUser", email);
+    localStorage.setItem("username", name); // Save for dashboard
 
     alert("Registration successful!");
-    navigate("/dashboard"); // Redirect to user dashboard after registration
+    navigate("/dashboard");
   };
 
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-          <h2 className="text-3xl font-bold text-center text-teal-700 mb-6">
+      <div className="min-h-screen flex items-center justify-center relative">
+        {/* Dark Modern Background like Login */}
+        <div className="absolute inset-0 bg-gradient-to-br to-gray-800 from-teal-800 overflow-hidden">
+          <div className="absolute bottom-[-150px] left-[-120px] w-128 h-128 bg-gradient-to-tr from-pink-500 to-orange-500 rounded-full opacity-30 filter blur-3xl animate-spin-slow"></div>
+        </div>
+
+        <div className="bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md relative z-10">
+          <h2 className="text-3xl font-bold text-center text-teal-400 mb-6">
             Create Account
           </h2>
 
@@ -51,7 +53,8 @@ function Register() {
               placeholder="Full Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-4 py-2 rounded-lg focus:ring-2 focus:ring-teal-400 outline-none bg-gray-900 text-white border-gray-700"
+              required
             />
 
             <input
@@ -59,7 +62,8 @@ function Register() {
               placeholder="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-4 py-2 rounded-lg focus:ring-2 focus:ring-teal-400 outline-none bg-gray-900 text-white border-gray-700"
+              required
             />
 
             <input
@@ -67,20 +71,21 @@ function Register() {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-4 py-2 rounded-lg focus:ring-2 focus:ring-teal-400 outline-none bg-gray-900 text-white border-gray-700"
+              required
             />
 
             <button
               type="submit"
-              className="w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-800 transition"
+              className="w-full bg-teal-400 text-gray-900 py-2 rounded-lg hover:bg-teal-500 transition"
             >
               Register
             </button>
           </form>
 
-          <p className="text-center mt-4 text-gray-600">
+          <p className="text-center mt-4 text-gray-300">
             Already have an account?{" "}
-            <Link to="/login" className="text-teal-700 font-semibold">
+            <Link to="/login" className="text-teal-400 font-semibold">
               Login
             </Link>
           </p>

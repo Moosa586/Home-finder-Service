@@ -1,6 +1,6 @@
 export default function PainterService() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-indigo-50">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero */}
       <section
         data-aos="fade-down"
@@ -24,8 +24,10 @@ export default function PainterService() {
         />
 
         <div data-aos="fade-left">
-          <h2 className="text-3xl font-bold mb-4">Bring Colors to Life</h2>
-          <p className="text-gray-700 mb-6">
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Bring Colors to Life
+          </h2>
+          <p className="text-orange-300 mb-6">
             Professional wall painting, texture finishes, waterproof coating and
             full home renovation solutions.
           </p>

@@ -1,29 +1,3 @@
-// export default function WhyUs() {
-//   return (
-//     <section className="py-16">
-//       <div className="max-w-7xl mx-auto px-6 text-center">
-//         <h3 className="text-3xl font-bold mb-10">Why Choose HomeFinder?</h3>
-
-//         <div className="grid md:grid-cols-3 gap-8">
-//           <div className="p-6 rounded-xl border">
-//             <h4 className="font-semibold text-xl mb-2">Verified Listings</h4>
-//             <p className="text-gray-600">100% authentic and verified properties.</p>
-//           </div>
-
-//           <div className="p-6 rounded-xl border">
-//             <h4 className="font-semibold text-xl mb-2">Best Prices</h4>
-//             <p className="text-gray-600">Market competitive pricing guaranteed.</p>
-//           </div>
-
-//           <div className="p-6 rounded-xl border">
-//             <h4 className="font-semibold text-xl mb-2">Trusted Agents</h4>
-//             <p className="text-gray-600">Professional and experienced agents.</p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
 export default function WhyUs() {
   const features = [
     {
@@ -44,12 +18,14 @@ export default function WhyUs() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div data-aos="fade-up" className="text-center max-w-2xl mx-auto mb-16">
-          <h3 className="text-4xl font-bold mb-4">Why Choose HomeFinder?</h3>
-          <p className="text-gray-600">
+          <h3 className="text-4xl font-bold mb-4 text-white">
+            Why Choose HomeFinder?
+          </h3>
+          <p className="text-orange-300 text-lg">
             We deliver trust, transparency, and value in every property deal.
           </p>
         </div>
@@ -61,7 +37,7 @@ export default function WhyUs() {
               key={index}
               data-aos="zoom-in"
               data-aos-delay={index * 150}
-              className="group bg-white rounded-2xl p-8 shadow hover:shadow-xl 
+              className="group bg-gradient-to-br to-gray-800 from-teal-800 rounded-2xl p-8 shadow hover:shadow-xl 
               transition duration-300 hover:-translate-y-2"
             >
               {/* Icon substitute: colored circle */}
@@ -72,9 +48,11 @@ export default function WhyUs() {
                 {item.title[0]}
               </div>
 
-              <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
+              <h4 className="text-xl text-orange-300 font-semibold mb-3">
+                {item.title}
+              </h4>
 
-              <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              <p className="text-white leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

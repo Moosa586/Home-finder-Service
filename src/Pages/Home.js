@@ -11,9 +11,10 @@ import Carpenter from "./Carpenter";
 import WhyUs from "./WhyUs";
 function Home() {
   return (
-    <div>
+    <div className="bg-gray-500">
       <Navbar />
       <Hero />
+
       <Electronics />
       <Painter />
       <Carpenter />

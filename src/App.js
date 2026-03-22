@@ -15,6 +15,7 @@ import Admin from "./Pages/Admin";
 import Carpenter from "./Pages/Carpenter";
 import Electronics from "./Pages/Electronics";
 import Painter from "./Pages/Painter";
+import About from "./Pages/About";
 
 function App() {
   useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
         <Route path="/Carpenter" element={<Carpenter />} />
         <Route path="/Electronics" element={<Electronics />} />
         <Route path="/Painter" element={<Painter />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </Router>
   );

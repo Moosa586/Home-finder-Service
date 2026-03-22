@@ -1,6 +1,6 @@
 export default function ElectronicsService() {
   return (
-    <div className="min-h-screen bg-white text-white pt-20">
+    <div className="min-h-screen bg-gray-900 text-white pt-20">
       {/* Hero */}
       <section
         data-aos="fade-down"
@@ -15,13 +15,13 @@ export default function ElectronicsService() {
       <div className="h-24"></div>
 
       {/* Cards */}
-      <section className="max-w-6xl mx-auto px-6 pb-24 grid md:grid-cols-3 gap-8">
+      <section className="max-w-6xl mx-auto px-6 pb-24 grid md:grid-cols-3 gap-8 ">
         {["AC Repair", "Wiring", "Fan Repair"].map((item, i) => (
           <div
             key={i}
             data-aos="fade-up"
             data-aos-delay={i * 150}
-            className="bg-gray-900 p-8 rounded-xl border border-gray-800 
+            className="bg-gradient-to-br to-gray-800 from-teal-800 p-8 rounded-xl border border-gray-800 
             hover:border-indigo-500 transition"
           >
             <h3 className="text-xl font-semibold mb-3">{item}</h3>
@@ -29,7 +29,6 @@ export default function ElectronicsService() {
               Certified technicians delivering safe and fast electronic
               solutions.
             </p>
-            
           </div>
         ))}
       </section>

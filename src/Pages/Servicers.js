@@ -29,14 +29,14 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-50 min-h-screen py-24">
+      <div className="bg-gradient-to-br to-gray-800 from-teal-800 min-h-screen py-24">
         {/* Header */}
         <div
           data-aos="fade-up"
-          className="text-center max-w-3xl mx-auto mb-20 px-6"
+          className="text-center text-white max-w-3xl mx-auto mb-20 px-6"
         >
           <h1 className="text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-white text-lg">
             Choose from our trusted professional home services tailored for your
             needs.
           </p>

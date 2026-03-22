@@ -1,6 +1,6 @@
 export default function CarpenterService() {
   return (
-    <div className="min-h-screen bg-[#f8f5f0]">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero */}
       <section
         data-aos="fade-down"
@@ -15,10 +15,10 @@ export default function CarpenterService() {
       </section>
 
       {/* Info */}
-      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
+      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 ">
         <div data-aos="fade-right">
           <h2 className="text-3xl font-bold mb-4">Crafted With Precision</h2>
-          <p className="text-gray-700 mb-6">
+          <p className="text-orange-300 mb-6">
             Custom furniture, doors, cabinets, polishing and full woodwork
             solutions delivered by expert craftsmen.
           </p>

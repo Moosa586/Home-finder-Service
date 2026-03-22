@@ -272,7 +272,6 @@ import React from "react";
 export default function Servicers({ title, image, desc, features = [] }) {
   return (
     <div className="bg-gray-50 min-h-screen">
-
       {/* Hero Section */}
       <section
         className="relative h-96 md:h-[500px] flex items-center justify-center"
